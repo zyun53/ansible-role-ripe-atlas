@@ -1,10 +1,10 @@
 ---
-- name: Import new RPM key
+- name: Copy new RPM key.
   copy:
     src: RPM_KEY.public
     dest: /etc/pki/rpm-gpg/ripe-atlas-probe
 
-- name: Install Datadog yum repo
+- name: Set ripe-atlas-probe yum repo.
   yum_repository:
     name: ripe-atlas-probe
     description: RIPE Atlas Probe Repo
@@ -14,7 +14,13 @@
     repo_gpgcheck: true
     gpgkey: file:///etc/pki/rpm-gpg/ripe-atlas-probe
 
-- name: Install packages.
+- name: Install atlasswprobe packages.
   package:
     name: atlasswprobe
     state: present
+
+- name: Enable atlas service.
+  service:
+    name: atlas
+    state: started
+    enabled: true
