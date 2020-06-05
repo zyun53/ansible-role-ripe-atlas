@@ -12,7 +12,7 @@
     enabled: yes
     gpgcheck: false
     repo_gpgcheck: true
-    gpgkey: file:///etc/pki/rpm-gpg/ripe-atlas-probea
+    gpgkey: file:///etc/pki/rpm-gpg/ripe-atlas-probe
 
 - name: Install packages.
   package:
