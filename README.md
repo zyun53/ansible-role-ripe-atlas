@@ -1,7 +1,7 @@
-Role Name
+Role: RIPE Atlas Software Probes
 =========
 
-A brief description of the role goes here.
+[RIPE Atlas Software Probes](https://atlas.ripe.net/docs/software-probe/)
 
 Requirements
 ------------
