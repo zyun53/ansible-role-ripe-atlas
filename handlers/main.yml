@@ -1,2 +1,8 @@
 ---
-# handlers file for zyun_i.ripe-atlas-software-probe
+- name: reboot ubuntu
+  reboot:
+
+- name: restart rsyslog
+  service:
+    name: rsyslog
+    state: restarted

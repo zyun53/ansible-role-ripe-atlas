@@ -1,2 +1,20 @@
 ---
-# tasks file for zyun_i.ripe-atlas-software-probe
+- name: Import new RPM key
+  copy:
+    src: RPM_KEY.public
+    dest: /etc/pki/rpm-gpg/ripe-atlas-probe
+
+- name: Install Datadog yum repo
+  yum_repository:
+    name: ripe-atlas-probe
+    description: RIPE Atlas Probe Repo
+    baseurl: https://ftp.ripe.net/ripe/atlas/software-probe/centos8
+    enabled: yes
+    gpgcheck: false
+    repo_gpgcheck: true
+    gpgkey: file:///etc/pki/rpm-gpg/ripe-atlas-probe
+
+- name: Install packages.
+  package:
+    name: atlasswprobe
+    state: present
