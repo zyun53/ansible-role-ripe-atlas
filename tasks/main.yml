@@ -1,18 +1,6 @@
 ---
-- name: Copy new RPM key.
-  copy:
-    src: RPM_KEY.public
-    dest: /etc/pki/rpm-gpg/ripe-atlas-probe
-
-- name: Set ripe-atlas-probe yum repo.
-  yum_repository:
-    name: ripe-atlas-probe
-    description: RIPE Atlas Probe Repo
-    baseurl: https://ftp.ripe.net/ripe/atlas/software-probe/centos8
-    enabled: yes
-    gpgcheck: false
-    repo_gpgcheck: true
-    gpgkey: file:///etc/pki/rpm-gpg/ripe-atlas-probe
+- include_tasks: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
 
 - name: Install atlasswprobe packages.
   package:
@@ -22,5 +10,5 @@
 - name: Enable atlas service.
   service:
     name: atlas
-    state: started
-    enabled: true
+    state: "{{ atlas_state }}"
+    enabled: "{{ atlas_enabled }}"

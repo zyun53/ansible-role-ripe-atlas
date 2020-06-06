@@ -1,8 +1,5 @@
 ---
-- name: reboot ubuntu
-  reboot:
-
-- name: restart rsyslog
+- name: restart atlas
   service:
-    name: rsyslog
+    name: atlas
     state: restarted

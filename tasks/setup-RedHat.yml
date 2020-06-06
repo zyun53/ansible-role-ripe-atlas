@@ -1,0 +1,15 @@
+---
+- name: Copy RPM key.
+  copy:
+    src: RPM_KEY.public
+    dest: /etc/pki/rpm-gpg/ripe-atlas-probe
+
+- name: Set ripe-atlas-probe yum repo.
+  yum_repository:
+    name: ripe-atlas-probe
+    description: RIPE Atlas Probe Repo
+    baseurl: "{{ atlas_repo_centos }}"
+    enabled: yes
+    gpgcheck: false
+    repo_gpgcheck: true
+    gpgkey: file:///etc/pki/rpm-gpg/ripe-atlas-probe
