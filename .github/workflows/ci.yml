@@ -17,4 +17,5 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: "${{ github.repository }}"
-      - uses: gofrolist/molecule-action@master
+      - name: molecule
+        uses: robertdebock/molecule-action@2.3.4
