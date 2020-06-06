@@ -9,7 +9,7 @@
     name: ripe-atlas-probe
     description: RIPE Atlas Probe Repo
     baseurl: "{{ atlas_repo_centos }}"
-    enabled: yes
+    enabled: true
     gpgcheck: false
     repo_gpgcheck: true
     gpgkey: file:///etc/pki/rpm-gpg/ripe-atlas-probe

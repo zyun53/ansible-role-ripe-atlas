@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include zyun_i.ripe-atlas-software-probe"
+      include_role:
+        name: "zyun_i.ripe-atlas-software-probe"
