@@ -18,4 +18,4 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: molecule
-        uses: robertdebock/molecule-action@2.3.4
+        uses: gofrolist/molecule-action@master
