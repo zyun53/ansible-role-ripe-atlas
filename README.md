@@ -1,4 +1,4 @@
-# Ansible Role: RIPE Atlas Software Probes
+# Ansible Role: RIPE Atlas
 
 ![CI](https://github.com/zyun-i/ansible-role-ripe-atlas-software-probe/workflows/CI/badge.svg)
 
@@ -26,7 +26,7 @@ None.
 ```yml
 - hosts: servers
   roles:
-     - zyun_i.ripe-atlas-software-probe
+     - zyun_i.ripe-atlas
 ```
 
 Get probe key from `/var/atlas-probe/etc/probe_key.pub` .
