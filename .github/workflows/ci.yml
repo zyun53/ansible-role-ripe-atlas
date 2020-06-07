@@ -1,3 +1,4 @@
+---
 # This is a basic workflow to help you get started with Actions
 
 name: CI
@@ -6,9 +7,9 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   molecule:
@@ -18,4 +19,4 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: molecule
-        uses: gofrolist/molecule-action@master
+        uses: robertdebock/molecule-action@2.3.4
