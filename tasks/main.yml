@@ -2,13 +2,14 @@
 - include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
-# - name: Install atlasswprobe packages.
-#   package:
-#     name: atlasswprobe
-#     state: present
-#
-# - name: Enable atlas service.
-#   service:
-#     name: atlas
-#     state: "{{ atlas_state }}"
-#     enabled: "{{ atlas_enabled }}"
+- name: Install atlasswprobe packages.
+  package:
+    name: atlasswprobe
+    state: present
+
+- name: Enable atlas service.
+  service:
+    name: atlas
+    state: "{{ atlas_service_state }}"
+    enabled: "{{ atlas_service_enabled }}"
+  when: atlas_service

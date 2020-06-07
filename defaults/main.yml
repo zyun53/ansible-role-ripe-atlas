@@ -1,5 +1,8 @@
 ---
-atlas_state: started
-atlas_enabled: true
+atlas_service: true
+atlas_service_state: started
+atlas_service_enabled: true
+
+atlas_package_state: present
 
 atlas_repo_centos: https://ftp.ripe.net/ripe/atlas/software-probe/centos{{ ansible_distribution_major_version }}

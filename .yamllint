@@ -1,4 +1,6 @@
 ---
+ignore: |
+  .github/workflows/ci.yml
 extends: default
 rules:
   line-length:

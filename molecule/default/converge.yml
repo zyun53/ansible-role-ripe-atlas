@@ -1,5 +1,7 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    atlas_service: false
   roles:
     - role: ansible-role-ripe-atlas-software-probe
