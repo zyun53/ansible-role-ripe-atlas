@@ -2,6 +2,7 @@
 galaxy_info:
   author: Isida Zyun'iti
   description: Ansible role for ripe atlas software probe
+  role_name: ripe-atlas-software-probe
 
   license:
     - MIT
@@ -16,7 +17,7 @@ galaxy_info:
 
   galaxy_tags:
     - ripe
-    - oss
-    - server
+    - atlas
+    - monitoring
 
 dependencies: []
